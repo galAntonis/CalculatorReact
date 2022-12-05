@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 
 function App() {
 	return (
@@ -7,6 +7,10 @@ function App() {
 					<span><p>My Calculator</p></span>
 				</div>
 				<div className="calculator">
+					<div className="display">
+						{0 ? <span>0</span> : ''}&nbsp;
+
+					</div>
 
 				</div>
 		</div>
