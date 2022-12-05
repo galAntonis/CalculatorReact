@@ -4,7 +4,7 @@ function App() {
 	return (
 		<div className="App">
 				<div className="headerTitle">
-					<span><p>hover or tap me</p></span>
+					<span><p>My Calculator</p></span>
 				</div>
 				<div className="calculator">
 
