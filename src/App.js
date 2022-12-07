@@ -1,11 +1,19 @@
 import { useState } from "react";
 
 function App() {
-	const [calc,setCalc] = useState("");
-	const [result,setResult] = useState("");
+	{/* 
+		-- VARIABLE DECLARATION -- 
+	*/}
+	{/*State Variables*/}
+    const [calc,setCalc] = useState(""); {/* used for calculations */}
+	const [result,setResult] = useState(""); {/* used for the result calculation */}
+	{/*List Variables*/}
+	const ops = ['/','*','+','-','.']; {/* Operators */}
 
-	const ops = ['/','*','+','-','.'];
-
+	{/*
+		-- FUNCTIONS -- 
+	*/}
+	{/* This function sets the value of the calculator after each button is pressed */}
 	const updateCalc = value =>{
 		if((ops.includes(value) && calc === '') || (ops.includes(value) && ops.includes(calc.slice(-1))))
 		{
@@ -19,7 +27,8 @@ function App() {
 		}
 	}
 
-
+	{/* A for loop to create the 10 digits of the calculator instead of 
+		hard coding them */}
 	const createDigits = () => {
 		const digits = [];
 		for (let i=1; i<10; i++){
