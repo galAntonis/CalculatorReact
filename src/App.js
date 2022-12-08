@@ -26,7 +26,6 @@ function App() {
 			setResult(eval(calc+value).toString());
 		}
 	}
-
 	{/* A for loop to create the 10 digits of the calculator instead of 
 		hard coding them */}
 	const createDigits = () => {
@@ -40,21 +39,19 @@ function App() {
 				</button>
 			)
 		}
-
 		return digits;
 	}
-
+	{/* Prints the result after pressing the "=" button */}
 	const calculate = () => {
 		setCalc(eval(calc).toString())
 	}
-
+	{/* Deletes the last number or operator after pressing the "DEL" button
+		using .slice() on calc */}
 	const deleteLast = () =>{
 		if (calc === ''){
 			return;
 		}
-
 		const value = calc.slice(0,-1);
-
 		setCalc(value);
 	}
 
